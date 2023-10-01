@@ -9,6 +9,10 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { ApiKeyList } from "./apiKey/ApiKeyList";
+import { ApiKeyCreate } from "./apiKey/ApiKeyCreate";
+import { ApiKeyEdit } from "./apiKey/ApiKeyEdit";
+import { ApiKeyShow } from "./apiKey/ApiKeyShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +45,13 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="ApiKey"
+          list={ApiKeyList}
+          edit={ApiKeyEdit}
+          create={ApiKeyCreate}
+          show={ApiKeyShow}
         />
       </Admin>
     </div>
